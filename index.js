@@ -21,6 +21,6 @@ module.exports = {
 
   included: function(app) {
     this._super.included.apply(this, arguments);
-    app.registry.add('css', new Preprocessor(app.options.cssnextOptions));
+    app.registry.add('css', new Preprocessor(app.options && app.options.cssnextOptions));
   }
 };
