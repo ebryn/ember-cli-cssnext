@@ -1,0 +1,12 @@
+:root {
+  --font-size: 16px;
+}
+
+@custom-media --mobile screen and (max-width: 320px);
+
+@media (--mobile) {
+  a {
+    font-size: calc(var(--font-size) - 2px);
+    color: hwb(270, 20%, 40%);
+  }
+}
