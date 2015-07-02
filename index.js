@@ -12,7 +12,10 @@ function Preprocessor(options) {
 Preprocessor.prototype.toTree = function(tree, inputPath, outputPath, inputOptions) {
   return new Funnel(cssnext(tree, this.options), {
     srcDir: inputPath,
-    destDir: outputPath
+    destDir: '/',
+    getDestinationPath: function() {
+     return inputOptions.outputPaths.app;
+    }
   });
 };
 
